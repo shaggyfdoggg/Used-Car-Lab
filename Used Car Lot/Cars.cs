@@ -26,6 +26,10 @@ namespace Used_Car_Lot
 			Price = _price;
 
 		}
+		public void ToString()
+		{
+            Console.WriteLine($"Make{Make}, Model{Model},Year{Year},Price{Price}");
+        }
 	}
 }
 

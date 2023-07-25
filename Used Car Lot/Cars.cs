@@ -2,7 +2,7 @@
 
 namespace Used_Car_Lot
 {
-	public class Cars
+	internal abstract class Cars
 	{
 		//properties
 		public string Make { get; set; }

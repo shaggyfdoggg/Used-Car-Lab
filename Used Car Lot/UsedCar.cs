@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Used_Car_Lot
 {
-    internal class UsedCar:Cars
+    internal class UsedCar:Car
     {
         public double Mileage { get; set; }
 
@@ -23,19 +23,11 @@ namespace Used_Car_Lot
 
         }
 
-        public void ToStringMileage()
+        public override string ToString()
         {
-            if (Used == true)
-            {
-                Console.WriteLine($"Make: {Make}, Model: {Model}, Year: {Year}, Price: {Price},: Mileage {Mileage} (Used)");
-            } else
-            {
-                Console.WriteLine($"Make: {Make}, Model: {Model}, Year: {Year}, Price: {Price}");
-            }
-        
+            return base.ToString() + Mileage + Used;
         }
 
-        
 
     }
 }

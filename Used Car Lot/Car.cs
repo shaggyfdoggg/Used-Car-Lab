@@ -2,7 +2,7 @@
 
 namespace Used_Car_Lot
 {
-	internal abstract class Cars
+	internal class Car
 	{
 		//properties
 		public string Make { get; set; }
@@ -11,14 +11,14 @@ namespace Used_Car_Lot
 		public decimal Price { get; set; }
 
 		//constructor
-		public Cars ()
+		public Car ()
 		{
 			Make = "Ford";
 			Model = "Taurus";
 			Year = 2002;
 			Price = 2500.00m;
 		}
-		public Cars(string _make, string _model, int _year, decimal _price)
+		public Car(string _make, string _model, int _year, decimal _price)
 		{
 			Make = _make;
 			Model = _model;
@@ -26,10 +26,11 @@ namespace Used_Car_Lot
 			Price = _price;
 
 		}
-		public void ToString()
-		{
-            Console.WriteLine($"Make{Make}, Model{Model},Year{Year},Price{Price}");
+        public override string ToString()
+        {
+            return $"Make{Make}, Model{Model},Year{Year},Price{Price}";
+
         }
-	}
+    }
 }
 
